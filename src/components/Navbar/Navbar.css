@@ -1,0 +1,135 @@
+.navbar {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    background: white; */
+
+    & .logo {
+        width: 150px;
+    }
+
+    & .navbar-menu {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        color: #49557e;
+        font-size: 18px;
+    }
+
+    & .navbar-right {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        & svg {
+            font-size: 20px;
+        }
+
+        & div {
+            display: flex;
+            align-items: center;
+
+            & svg {
+                font-size: 22px;
+            }
+        }
+
+        & button {
+            background: transparent;
+            font-size: 16px;
+            color: #49557e;
+            border: 1px solid tomato;
+            padding: 10px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        & button:hover {
+            background-color: #fff4f2;
+        }
+
+        & .navbar-search-icon {
+            position: relative;
+
+            & .dot {
+                position: absolute;
+                min-width: 10px;
+                min-height: 10px;
+                background-color: tomato;
+                border-radius: 5px;
+                top: -8px;
+                right: -8px;
+            }
+        }
+    }
+
+    & .active {
+        padding-bottom: 2px;
+        border-bottom: 2px solid #49557e;
+    }
+
+    & li {
+        cursor: pointer;
+    }
+}
+
+@media (max-width:1050px) {
+    & .logo {
+        width: 140px !important;
+    }
+
+    & .navbar-menu {
+        gap: 20px !important;
+        font-size: 17px !important;
+    }
+
+    & .navbar-right {
+        gap: 30px !important;
+
+        & svg {
+            width: 22px !important;
+        }
+
+        & button {
+            padding: 8px 25px !important;
+        }
+    }
+
+}
+
+@media (max-width:900px) {
+    & .logo {
+        width: 120px !important;
+    }
+
+    & .navbar-menu {
+        gap: 15px !important;
+        font-size: 17px !important;
+    }
+
+    & .navbar-right {
+        gap: 20px !important;
+
+        & svg {
+            width: 20px !important;
+        }
+
+        & button {
+            padding: 7px 20px !important;
+            font-size: 15px !important;
+        }
+    }
+
+}
+
+@media (max-width:750px) {
+    .navbar-menu {
+        display: none !important;
+    }
+}
